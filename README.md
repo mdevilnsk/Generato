@@ -61,7 +61,7 @@ forexample you have several nested classes such
 	
 	With this project you can automate this routine in next 
 ```java	
-	Generato.generateFunctions(System.class);
+	Generato.generateFunctions(System1.class);
 ```	
 	and in output you will see next functions:
 	
