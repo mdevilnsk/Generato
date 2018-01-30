@@ -101,4 +101,5 @@ forexample you have several nested classes such
 	double
 	List<>
 	String
+	boolean
 	and your custom classes
