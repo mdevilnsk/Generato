@@ -4,7 +4,7 @@ Generato - it is Test helper that generates method to generate test values for E
 Write to console needed fumctions for generate class
 
 forexample you have several nested classes such
-
+```java
     class Device{
         private int id;
         private String type;
@@ -44,7 +44,7 @@ forexample you have several nested classes such
         public void setPort(int port) {this.port = port;}
     }
     
-    class System{
+    class System1{
         DeviceWrapper deviceWrapper;
         String name;
         Settings settings;
@@ -56,15 +56,16 @@ forexample you have several nested classes such
         public Settings getSettings() {return settings;}
         public void setSettings(Settings settings) {this.settings = settings;}
     }
-	
+```	
 	then you want to create new System object for tests then you need to write generate functions.
 	
 	With this project you can automate this routine in next 
-	
+```java	
 	Generato.generateFunctions(System.class);
-	
+```	
 	and in output you will see next functions:
 	
+```java
 	public static Settings generateSettings(int id){
 		Settings settings = new Settings();
 		settings.setPort(id);
@@ -93,7 +94,7 @@ forexample you have several nested classes such
 		system1.setDeviceWrapper(generateDeviceWrapper(id));
 		return system1;
 	}
-	
+```	
 	Works with:
 	int
 	long
@@ -103,3 +104,4 @@ forexample you have several nested classes such
 	String
 	boolean
 	and your custom classes
+	Required min java 1_8
