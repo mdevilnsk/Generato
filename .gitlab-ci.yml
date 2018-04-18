@@ -6,8 +6,9 @@ variables:
   ANDROID_SDK_TOOLS: "25.2.5"
 
 before_script:
-  - git remote add github git@github.com:mdevilnsk/Generato
-  - git push github HEAD:master
+  - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+  - chmod +x ./pushremote.sh
+  - ./pushremote.sh
 
 stages:
  - release
