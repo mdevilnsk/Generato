@@ -1,0 +1,18 @@
+image: openjdk:8-jdk
+
+variables:
+  ANDROID_COMPILE_SDK: "27"
+  ANDROID_BUILD_TOOLS: "27.0.3"
+  ANDROID_SDK_TOOLS: "25.2.5"
+
+before_script:
+  - git remote add github git@github.com:mdevilnsk/Generato
+  - git push github HEAD:master
+
+stages:
+ - release
+
+release:
+  stage: release
+  script:
+   -ls
