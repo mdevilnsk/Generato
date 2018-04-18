@@ -105,3 +105,5 @@ forexample you have several nested classes such
 	boolean
 	and your custom classes
 	Required min java 1_8
+TODO:
+	process enum
