@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir ~/.ssh
 touch ~/.ssh/known_hosts
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 GITLAB = "$(git remote -v | grep github)"
